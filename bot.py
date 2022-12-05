@@ -172,8 +172,9 @@ async def do_magic(message: discord.Message):
     """
     The code in this function is executed every time someone sends a message without the prefix.
     """
+    channel = message.channel
     if message.content == "Hello":
-        await message.reply("Hello!")
+        await channel.send("Hello")
 
 
 if __name__ == "__main__":
