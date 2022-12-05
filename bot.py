@@ -15,13 +15,6 @@ async def on_message(message):
     print(message.content)
 
 
-async def on_slash_command(ctx):
-    if ctx.name == "help":
-        await ctx.respond("Help message")
-    elif ctx.name == "ping":
-        await ctx.respond("Pong!")
-    elif ctx.name == "echo":
-        await ctx.respond(ctx.options[0].value)
 
 
 class Bot(discord.Client):

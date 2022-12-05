@@ -73,7 +73,7 @@ import time
 
 
 # Function to load the JSON files from the folder, time the process and show progress
-def get_json_file_paths(from_folder_full_path, verbose=True):
+def get_json_file_paths(from_folder_full_path: str, verbose: bool = True) -> list:
     """
     This function gets the full paths to all the JSON files in the folder
     :param from_folder_full_path: The full path to the folder with the JSON files
@@ -111,7 +111,7 @@ def get_json_file_paths(from_folder_full_path, verbose=True):
 
 
 # Function to get the data from the JSON files, time the process and show progress
-def get_data_from_json_files(json_files_path_list, verbose=True):
+def get_data_from_json_files(json_files_path_list: list, verbose: bool = True) -> list:
     """
     This function gets the raw data from the JSON files
     :param json_files_path_list: A list of JSON file paths
@@ -185,7 +185,7 @@ def get_data_from_json_files(json_files_path_list, verbose=True):
 
 
 # Function to convert the data to the required format, time the process and show progress
-def convert_data_to_required_format(raw_data_list, verbose=True):
+def convert_data_to_required_format(raw_data_list: list, verbose: bool = True) -> list:
     """
     This function converts the data to the required format by removing the new line characters and replacing the double
     quotes with single quotes
@@ -238,7 +238,7 @@ def convert_data_to_required_format(raw_data_list, verbose=True):
 
 
 # Function to write the data to a text file, time the process and show progress
-def write_data_to_text_file(converted_data_list, output_file_path, verbose=True):
+def write_data_to_text_file(converted_data_list: list, output_file_path: str, verbose: bool = True) -> None:
     """
     This function writes the data to a text file
     :param converted_data_list: A list of converted data
@@ -275,7 +275,7 @@ def write_data_to_text_file(converted_data_list, output_file_path, verbose=True)
 
 
 # Function to run the program, time the process and show progress
-def run_program(input_file_path, output_file_path, verbose=True):
+def run_program(input_file_path: str, output_file_path: str, verbose: bool = True) -> None:
     """
     This function runs the program
     :param input_file_path: The input file path
