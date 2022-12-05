@@ -192,3 +192,4 @@ fabric.properties
 /data/discord_chat_exports/*.json
 # Converted txt file
 /data/combined.txt
+*.txt
