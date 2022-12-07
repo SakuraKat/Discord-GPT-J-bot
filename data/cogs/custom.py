@@ -39,7 +39,8 @@ class CustomCommands(commands.Cog, name="custom"):
         # the file is located in data/combined.txt
         # the file contents are in utf-8 encoding
         # the file contains one bullshit per line
-        bs = random.choice(open("data/combined.txt", encoding="utf-8").readlines()).replace("___", "#")
+        bs = random.choice(
+            open("data/combined.txt", encoding="utf-8").readlines()).replace("___", "#")
         # Send the bullshit to the channel
         await context.send(bs)
 

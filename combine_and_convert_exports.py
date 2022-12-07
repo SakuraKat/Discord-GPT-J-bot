@@ -103,7 +103,8 @@ def get_json_file_paths(from_folder_full_path: str, verbose: bool = True) -> lis
     if verbose:
         print("----------------------------------------")
         print("Total JSON files loaded: " + str(total_number_of_json_files))
-        print("Total time taken to load the JSON files: {} seconds".format(total_time_taken))
+        print("Total time taken to load the JSON files: {} seconds".format(
+            total_time_taken))
         print("Average time taken to load a JSON file: {} seconds".format(round(
             (total_time_taken / total_number_of_json_files), 2)))
     # Return the list of JSON files
@@ -163,7 +164,8 @@ def get_data_from_json_files(json_files_path_list: list, verbose: bool = True) -
             round((total_time_taken / total_number_of_json_files), 2)))
         print("----------------------------------------")
         # print the number of authors
-        print("Number of authors: " + str(len(set([data[0] for data in raw_data_list]))))
+        print("Number of authors: " +
+              str(len(set([data[0] for data in raw_data_list]))))
         # print the number of messages
         print("Number of messages: " + str(len(raw_data_list)))
         # Find all the authors
@@ -215,7 +217,8 @@ def convert_data_to_required_format(raw_data_list: list, verbose: bool = True) -
             # Only add the message if it is not empty
             if message != "":
                 # Append the message author name and message content to the converted data list
-                converted_data_list.append(message_author_name + ": " + message + "\n")
+                converted_data_list.append(
+                    message_author_name + ": " + message + "\n")
     # Stop the timer
     end_time = time.time()
     # Calculate the total time taken
@@ -224,12 +227,14 @@ def convert_data_to_required_format(raw_data_list: list, verbose: bool = True) -
     if verbose:
         print("----------------------------------------")
         print("Total data converted: " + str(len(converted_data_list)))
-        print("Total time taken to convert the data: {} seconds".format(total_time_taken))
+        print("Total time taken to convert the data: {} seconds".format(
+            total_time_taken))
         print("Average time taken to convert a JSON file: {} seconds".format(
             round((total_time_taken / total_number_of_json_files), 2)))
         print("----------------------------------------")
         # Print the number of lines removed
-        print("Number of lines removed: " + str(len(raw_data_list) - len(converted_data_list)))
+        print("Number of lines removed: " +
+              str(len(raw_data_list) - len(converted_data_list)))
         # Print the number of lines removed per author
         print("Number of lines removed per author: " + str(
             (len(raw_data_list) - len(converted_data_list)) / len(set([data[0] for data in raw_data_list]))))
@@ -294,7 +299,8 @@ def run_program(input_file_path: str, output_file_path: str, verbose: bool = Tru
     # Load the JSON files
     raw_data_list = get_data_from_json_files(json_file_paths)
     # Convert the data to the required format
-    converted_data_list = convert_data_to_required_format(raw_data_list, verbose)
+    converted_data_list = convert_data_to_required_format(
+        raw_data_list, verbose)
     # Write the data to a text file
     write_data_to_text_file(converted_data_list, output_file_path, verbose)
     # Stop the timer
@@ -304,7 +310,8 @@ def run_program(input_file_path: str, output_file_path: str, verbose: bool = Tru
     # Print the message
     if verbose:
         print("----------------------------------------")
-        print("Total time taken to run the program: {} seconds".format(total_time_taken))
+        print("Total time taken to run the program: {} seconds".format(
+            total_time_taken))
         print("----------------------------------------")
         print("Program finished successfully!")
         print("----------------------------------------")
@@ -313,4 +320,5 @@ def run_program(input_file_path: str, output_file_path: str, verbose: bool = Tru
 # Run the program
 if __name__ == "__main__":
     # Run the program
-    run_program(os.getcwd() + "/data/discord_chat_exports", os.getcwd() + "/data/converted.txt")
+    run_program(os.getcwd() + "/data/discord_chat_exports",
+                os.getcwd() + "/data/converted.txt")
