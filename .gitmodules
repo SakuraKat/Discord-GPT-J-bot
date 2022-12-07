@@ -4,3 +4,6 @@
 [submodule "discord-bot-submodule"]
 	path = discord-bot-submodule
 	url = .\\discord-bot-submodule\\
+[submodule "data-manager-submodule"]
+	path = data-manager-submodule
+	url = .\\data-manager-submodule\\
