@@ -199,7 +199,3 @@ pip-selfcheck.json
 # *.ipr
 
 # Project specific stuff
-/data/discord_chat_exports/*
-/data/combined.txt
-/config.json
-/python-bot-code
