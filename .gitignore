@@ -201,5 +201,4 @@ pip-selfcheck.json
 # Project specific stuff
 /data/discord_chat_exports/*
 /data/combined.txt
-/config.json
 /python-bot-code
