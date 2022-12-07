@@ -260,7 +260,8 @@ def write_data_to_text_file(converted_data_list: list, output_file_path: str, ve
         # Loop through the list of converted data
         for converted_data in converted_data_list:
             # Write the converted data to the output file
-            f.write(converted_data)
+            f.write(converted_data + "\n")
+            # TODO: check the output
     # Stop the timer
     end_time = time.time()
     # Calculate the total time taken
