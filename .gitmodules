@@ -1,15 +1,9 @@
 [submodule "gpt-j-submodule"]
 	path = gpt-j-submodule
-	url = .\\gpt-j-submodule\\
+	url = git@github.com:SakuraKat/gpt-j-submodule.git
 [submodule "discord-bot-submodule"]
 	path = discord-bot-submodule
-	url = .\\discord-bot-submodule\\
+	url = git@github.com:SakuraKat/discord-bot-submodule.git
 [submodule "data-manager-submodule"]
 	path = data-manager-submodule
-	url = .\\data-manager-submodule\\
-[submodule ".\\data-manager-submodule\\"]
 	url = git@github.com:SakuraKat/data-manager-submodule.git
-[submodule ".\\discord-bot-submodule\\"]
-	url = git@github.com:SakuraKat/discord-bot-submodule.git
-[submodule ".\\gpt-j-submodule\\"]
-	url = git@github.com:SakuraKat/gpt-j-submodule.git
